@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Messages </title>
+</head>
+<body>
+	<%-include('navbar')%>
+	<% locals.messages.map((mess,id)=>{ %>
+		<p>Added: <%= mess.user %> text:<%= mess.text %> on <%= mess.added %></p> <a href="/details/<%=id%>">Open</a>
+	<% }) %>
+
+</body>
+</html>
